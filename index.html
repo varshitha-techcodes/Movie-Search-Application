@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Search App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main class="card">
+            <header>
+                <div class="logo">MS</div>
+                <div>
+                    <h1>MOVIE SEARCH APP</h1>
+                    <p>Search movies using OMDB API. Get ratings,details</p>
+                    <!-- used async/await/fetch -->
+                </div>
+            </header>
+            
+            <section class="searchpanel">
+                <div class="row">
+                    <label for="query" class="sr-only">Movie name</label>
+                    <input type="search" id="query" placeholder="Search movie">
+                    <select id="type">
+                        <option value="">All</option>
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                    </select>
+                    <input type="number" name="" id="year" placeholder="Year(optional)">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <div class="metarow">
+                    <div class="muted" id="status">Enter a title to begin with</div>
+                </div>
+            </section>
+            <section class="results" id="result">
+                <!--Results are displayed here-->
+            </section>
+
+            <nav class="pagination">
+            <button class="btn secondary" id="prevBtn" disabled>Prev</button>
+            <div class="muted" id="pageInfo">Page 0 of 0</div>
+            <button class="btn secondary" id="nextBtn" disabled>Next</button>
+            </nav>
+
+            <script src="script.js"></script>
+        </main>
+    </body>
+</html>
